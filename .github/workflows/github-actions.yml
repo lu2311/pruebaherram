@@ -1,0 +1,36 @@
+name: Frontend CI/CD
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mostrar evento
+        run: echo "🎉 El trabajo fue activado por un evento de tipo ${{ github.event_name }}"
+
+      - name: Mostrar sistema operativo
+        run: echo "🐧 Este trabajo se ejecuta en ${{ runner.os }}"
+
+      - name: Mostrar repositorio y rama
+        run: echo "🔎 Rama:${{ github.ref }} | Repo:${{ github.repository }}"
+
+      - name: Checkout del código
+        uses: actions/checkout@v4
+
+      - name: Mostrar archivos
+        run: ls -R
+
+      - name: Simular build
+        run: echo "✅ ¡Build exitoso!"
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Despliegue simulado
+        run: echo "🚀 Aquí iría el despliegue automático"
