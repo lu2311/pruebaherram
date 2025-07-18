@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KGLOW - REGISTRO</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/prueba1.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+
+</head>
+
+<body>
+    <header>
+        <section class="container-fluid primary-color py-3">
+            <section class="row align-items-center">
+                <!-- Espacio vacío a la izquierda -->
+                <section class="col-3"></section>
+
+                <!-- Título K-GLOW centrado -->
+                <section class="col-6 text-center">
+                    <img src="assets/img/K-GLOW_big (1).png" alt="Logo K-GLOW" class="img-fluid"
+                        style="max-width: 250px;">
+                </section>
+
+                <!-- Botones de usuario alineados a la derecha -->
+                <section class="col-3 d-flex justify-content-end">
+                    <section class="dropdown me-3">
+                        <button class="btn btn-dark rounded-0" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-person-circle" style="font-size: 2rem; color:white;"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="perfil.php">Perfil</a></li>
+                            <li>
+                                <hr class="dropdown-sectionider">
+                            </li>
+                            <li><a class="dropdown-item" href="salirUser.php">Favoritos</a></li>
+                            <li><a class="dropdown-item" href="salirUser.php">Cerrar Sesión</a></li>
+                        </ul>
+                    </section>
+                    <section class="dropdown">
+                        <button class="btn btn-dark rounded-0" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-person-circle" style="font-size: 2rem; color:white;"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="login.php">Iniciar Sesion</a></li>
+                        </ul>
+                    </section>
+                </section>
+            </section>
+        </section>
+
+        <nav class="primary-color navbar navbar-expand-xl">
+            <section class="container-fluid">
+                <section class="offcanvas offcanvas-xl offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <section class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </section>
+                    <section class="offcanvas-body">
+                        <ul class="navbar-nav ms-5 justify-content-center flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="index.php">TODO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="modaH.php">OJOS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="modaM.php">ROSTRO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="acercaDe.php">LABIOS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="sucursales.php">SERVICIOS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="redes.php">NOSOTROS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="redes.php">CONTACTO</a>
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </section>
+        </nav>
+    </header>
+
+
+
+    <section class="MainFondo fondo-color">
+        <section class="container w-75 rounded shadow my-5">
+            <section class="row align-items-stretch">
+                <section class="col primary-color rounded-end p-5">
+                    <section class="text-center">
+                        <i class="bi bi-heart-fill" style="font-size: 4rem; color:rgb(255, 255, 255);"></i>
+                    </section>
+                    <h2 class="fw-bold text-center py-5">Registrate </h2>
+                    <!--Login-->
+                    <form action="#">
+
+                        <section class="mb-3">
+                            <label for="nombres" class="form-label">Nombres</label>
+                            <input type="text" class="form-control" name="nombres" id="nombres" required>
+                        </section>
+                        <section class="mb-3">
+                            <label for="apellidos" class="form-label">Apellidos</label>
+                            <input type="text" class="form-control" name="apellidos" id="apellidos" required>
+                        </section>
+                        <section class="mb-3">
+                            <label for="direccion" class="form-label">Dirección de Domicilio</label>
+                            <input type="text" class="form-control" name="direccion" id="direccion" required>
+                        </section>
+                        <section class="mb-3">
+                            <label for="celular" class="form-label">Celular</label>
+                            <input type="text" class="form-control" id="celular" name="celular" required maxlength="9"
+                                pattern="\d{9}" title="Ingrese 9 dígitos numéricos" aria-describedby="celularHelp">
+                            <section id="celularHelp" class="form-text">Ingrese exactamente 9 dígitos numéricos.</section>
+                            <section class="invalid-feedback">
+                                Los numeros de celular deben tener exactamente 9 dígitos numéricos.
+                            </section>
+                        </section>
+                        <section class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" name="email" id="email" required>
+                        </section>
+                        <section class="mb-3">
+                            <label for="password" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" name="password" id="password" required>
+                            <section class="invalid-feedback">
+                                La contraseña debe tener entre 8 y 20 caracteres, contener unicamente letras y números.
+                            </section>
+                        </section>
+                        <section class="mb-3">
+                            <label for="confirm-password" class="form-label">Confirme Contraseña</label>
+                            <input type="password" class="form-control" name="confirm-password" id="confirm-password"
+                                required>
+                            <section class="invalid-feedback"> Las contraseñas no coinciden</section>
+                        </section>
+
+                        <section class="mb-3 form-check">
+                            <input type="checkbox" name="connected" class="form-check-input">
+                            <label for="connected" class="form-check-label">Recuerdame</label>
+                        </section>
+                        <section class="d-grid">
+                            <button type="submit" class="btn btn-primary">Registrar</button>
+                        </section>
+
+                        <section class="my-3">
+                            <span>Ya tengo cuenta. <a href="login.html">Iniciar sesión.</a></span><br>
+                        </section>
+
+                    </form>
+
+                    <!--LOgin con Redes Sociales-->
+                    <section class="container w-100 my-5">
+                        <section class="row text-center">
+                            <section class="col-12">Registrarse usando:</section>
+                        </section>
+                        <section class="row">
+                            <section class="col">
+                                <button class="btn btn-primary w-100 my-1">
+                                    <section class="row align-items-center">
+                                        <section class="col-2 d-none d-md-block">
+                                            <i class="bi bi-facebook"></i>
+                                        </section>
+                                        <section class="col-12 col-md-10 text-center">
+                                            Facebook
+                                        </section>
+                                    </section>
+                                </button>
+                            </section>
+                            <section class="col">
+                                <button class="btn btn-danger w-100 my-1">
+                                    <section class="row align-items-center">
+                                        <section class="col-2 d-none d-md-block">
+                                            <i class="bi bi-google"></i>
+                                        </section>
+                                        <section class="col-12 col-md-10 text-center">
+                                            Google
+                                        </section>
+                                    </section>
+                                </button>
+                            </section>
+                        </section>
+                    </section>
+
+
+                </section>
+                <section class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded-start"></section>
+                <!-- Imagen de labiales-->
+            </section>
+        </section>
+    </section>
+    <footer class="footer">
+        <section class="container-footer">
+            <section class="menu-footer">
+                <section class="contact-info">
+                    <p class="title-footer">INFORMACIÓN</p>
+                    <ul>
+                        <li>Dirección legal: Av. La Marina 2355, San Miguel, Lima</li>
+                        <li>RUC: 20548796321</li>
+                        <li>Email: kglow@support.com</li>
+                        <li>Teléfono: +51 934553657</li>
+                    </ul>
+
+                    <section class="social-icons">
+                        <span class="facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </span>
+                        <span class="twitter">
+                            <i class="fab fa-twitter"></i>
+                        </span>
+                        <span class="youtube">
+                            <i class="fab fa-youtube"></i>
+                        </span>
+                        <span class="pinterest">
+                            <i class="fab fa-pinterest-p"></i>
+                        </span>
+                        <span class="instagram">
+                            <i class="fab fa-instagram"></i>
+                        </span>
+                    </section>
+                </section>
+
+
+                <section class="information">
+                    <p class="title-footer">¡TE AYUDAMOS!</p>
+                    <ul>
+                        <li><a href="#">Términos y condiciones</a></li>
+                        <li><a href="#">Protección de datos</a></li>
+                        <li><a href="#">Cambios y devoluciones</a></li>
+                        <li><a href="#">Plazos de reembolso</a></li>
+                        <li><a href="#">Acumulación de puntos</a></li>
+                        <li><a href="#">Campañas publicitarias</a></li>
+                    </ul>
+                </section>
+
+                <section class="my-account">
+                    <p class="title-footer">SERVICIO AL CLIENTE</p>
+                    <ul>
+                        <li><a href="#">Preguntas frecuentes</a></li>
+                        <li><a href="#">Historial de órdenes</a></li>
+                        <li><a href="#">Lista de deseos</a></li>
+                        <li><a href="#">Seguimiento de Pedidos</a></li>
+                        <li><a href="#">Consulta de Puntos</a></li>
+                    </ul>
+                </section>
+            </section>
+            <section class="copyright">
+                <p>&copy; 2024 K-GLOW S.A.C. Todos los derechos reservados.</p>
+            </section>
+        </section>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Solo carga el script de Instagram una vez -->
+    <script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+</body>
+
+</html>
